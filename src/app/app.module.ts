@@ -6,12 +6,14 @@ import { Ng2GoogleChartModule } from 'ng2-googlechart';
 import { AppComponent } from './app.component';
 import {AccountListComponent} from './dashboard/account-list.component';
 import {MyAdvisorComponent} from './dashboard/my-advisor.component';
+import {MapShowComponent} from './dashboard/map-show.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccountListComponent,
-    MyAdvisorComponent
+    MyAdvisorComponent,
+    MapShowComponent
   ],
   imports: [
     BrowserModule,

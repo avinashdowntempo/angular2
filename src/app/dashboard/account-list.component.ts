@@ -7,6 +7,24 @@ import { Component } from '@angular/core';
 })
 export class AccountListComponent {
   accounts = ACCOUNTS;
+  data = [83, 75, 67, 50, 90, 35];
+   labels = ['DS', 'LD', 'EC', 'M3', 'DS Lab', 'EC Lab'];
+   columnTypes = [{
+                'type': 'string',
+                'value': 'subjectName'
+              },
+                {
+                  'type': 'number',
+                  'value': 'Marks'
+                }];
+  chartType = 'Pie';
+  options = {
+                'width': 550,
+                'height': 300,
+                'pieHole': 0.4,
+                'bars': 'vertical',
+                'chartArea': { 'left': 50, 'bottom': 50, 'right': 100, 'top': 50 }
+              };
   /*pieChartOptions =  [{
   chartType: 'PieChart',
   dataTable: [
@@ -35,27 +53,7 @@ export class AccountListComponent {
     'chartArea': { 'left': '5' }
     },
 }];*/
- labels = ['DS', 'LD', 'EC', 'M3', 'DS Lab', 'EC Lab'];
-              data = [83, 75, 67, 50, 90, 35];
 
-             columnTypes = [{
-                'type': 'string',
-                'value': 'subjectName'
-              },
-                {
-                  'type': 'number',
-                  'value': 'Marks'
-                }];
-
-              chartType = 'Pie';
-
-              options = {
-                'width': 550,
-                'height': 300,
-                'pieHole': 0.4,
-                'bars': 'vertical',
-                'chartArea': { 'left': 50, 'bottom': 50, 'right': 100, 'top': 50 }
-              };
 
   onSelect(mod) {
     if ( mod.show === false){

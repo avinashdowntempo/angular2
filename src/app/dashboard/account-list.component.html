@@ -6,16 +6,7 @@
       <div class="list-group-item acchead"><span>Account</span><span class="pull-right">Market Value</span></div>
       <div (click)="onSelect(sub)" *ngFor="let sub of account.subaccounts" class="list-group-item">{{sub.accname}}  {{sub.acctype}} <span class="pull-right"> {{sub.mrkvalue | currency:'USD':true:'4.2-2'}}</span>
       <!--<div><google-chart style="width:800px; height:800px;" *ngIf="sub.show === true" [data]="pieChartOptions[1]"></google-chart></div><!-->
-              <div *ngIf="sub.show === true" class="chart"
-                    chart  
-                    [data]="data" 
-                    [options]="options" 
-                    [labels]="labels" 
-                    [columnTypes]="columnTypes" 
-                    [chartType]="chartType">
-                    lakalak<br>
-                    lakalaka<br>
-             </div>
+      <map-show [show]="sub.show" [data]="data" [labels]="labels" [columnTypes]="columnTypes" [chartType]="chartType" [options]="options"></map-show>
       </div>
      
     </div>
