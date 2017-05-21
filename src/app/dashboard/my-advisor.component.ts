@@ -1,23 +1,20 @@
 import { Component } from '@angular/core';
+import { OnInit } from '@angular/core';
+import { AdvisorService } from './services/advisor.service';
+import { Advisor } from './models/advisor';
 
 @Component({
   selector: 'my-advisor',
-  templateUrl: './my-advisor.component.html'
+  templateUrl: './my-advisor.component.html',
+  providers: [AdvisorService]
 })
-export class MyAdvisorComponent {
-    advisor= ADVISOR;
+export class MyAdvisorComponent implements OnInit {
+    advisor: Advisor;
+    constructor(private _AdvisorService: AdvisorService){}
+    getAdvisor(){
+      this._AdvisorService.getAdvisor().then((advisor: Advisor) => this.advisor = advisor);
+        }
+    ngOnInit() {
+     this.getAdvisor();
+   }
 }
-export class Advisor {
-  myadvisor: string;
-  address: string;
-  tel: string;
-  email: string;
-  display: string;
-}
-const ADVISOR: Advisor = {
-   myadvisor: 'Neil Young',
-  address: 'Edmonton Central',
-  tel: 'Tel: 514-979-1200 Ext. 123',
-  email: 'nyoung@mail.ca',
-  display: 'https://demo.flex.univeris.com/iconnect/u/pages/advisor.page'
-};
