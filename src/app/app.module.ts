@@ -4,11 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Ng2GoogleChartModule } from 'ng2-googlechart';
 import { AppComponent } from './app.component';
-
+import {AccountListComponent} from './dashboard/account-list.component';
+import {MyAdvisorComponent} from './dashboard/my-advisor.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AccountListComponent,
+    MyAdvisorComponent
   ],
   imports: [
     BrowserModule,

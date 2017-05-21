@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
 
-
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'account-list',
+  templateUrl: './account-list.component.html',
+  styleUrls: ['./account-list.component.css']
 })
-export class AppComponent {
-  //accounts = ACCOUNTS;
-  
+export class AccountListComponent {
+  accounts = ACCOUNTS;
   /*pieChartOptions =  [{
   chartType: 'PieChart',
   dataTable: [
@@ -37,10 +35,10 @@ export class AppComponent {
     'chartArea': { 'left': '5' }
     },
 }];*/
-/* labels = ['DS', 'LD', 'EC', 'M3', 'DS Lab', 'EC Lab'];
+ labels = ['DS', 'LD', 'EC', 'M3', 'DS Lab', 'EC Lab'];
               data = [83, 75, 67, 50, 90, 35];
 
-              columnTypes = [{
+             columnTypes = [{
                 'type': 'string',
                 'value': 'subjectName'
               },
@@ -56,14 +54,8 @@ export class AppComponent {
                 'height': 300,
                 'pieHole': 0.4,
                 'bars': 'vertical',
-                'chartArea': { 'left': 50, 'bottom': 50, 'right': 100, 'top': 50 },
-                hAxis: {
-                  title: 'Subject'
-                },
-                vAxis: {
-                  title: 'Marks'
-                }
-              }
+                'chartArea': { 'left': 50, 'bottom': 50, 'right': 100, 'top': 50 }
+              };
 
   onSelect(mod) {
     if ( mod.show === false){
@@ -77,10 +69,7 @@ export class Account {
   name: string;
   id: number;
   subaccounts: [{show: boolean; accname: String; acctype: String; mrkvalue: number; }];
-}*/
 }
-
-/*
 const ACCOUNTS: Account[] = [
   { id: 189986, name: 'Dr. Robert Grewal',
   subaccounts: [{show: false, accname: '11A28865 - Self-Directed LIRA', acctype: 'Univeris Nominee', mrkvalue: 857369.92 },
@@ -91,4 +80,4 @@ const ACCOUNTS: Account[] = [
   {show: false, accname: '11A28851 - SDRSP', acctype: 'Univeris Nominee', mrkvalue: 247868.61 },
   {show: false, accname: 'Open or Non-Registered', acctype: 'Univeris Client Name', mrkvalue: 129267.55 } ]}
 ];
-*/
+
