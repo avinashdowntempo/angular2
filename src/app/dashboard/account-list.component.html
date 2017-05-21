@@ -4,9 +4,9 @@
     {{account.name}}<br>({{account.id}})
   </div>
       <div class="list-group-item acchead"><span>Account</span><span class="pull-right">Market Value</span></div>
-      <div (click)="onSelect(sub)" *ngFor="let sub of account.subaccounts" class="list-group-item">{{sub.accname}}  {{sub.acctype}} <span class="pull-right"> {{sub.mrkvalue | currency:'USD':true:'4.2-2'}}</span>
+      <div (click)="onSelect(sub)" *ngFor="let sub of account.subaccounts" class="list-group-item" style="padding: 0px;"><div style="padding:10px;" [class.tabact]="sub.show" >{{sub.accname}}  {{sub.acctype}} <span class="pull-right"> {{sub.mrkvalue | currency:'USD':true:'4.2-2'}}</span></div>
       <!--<div><google-chart style="width:800px; height:800px;" *ngIf="sub.show === true" [data]="pieChartOptions[1]"></google-chart></div><!-->
-      <map-show [show]="sub.show" [data]="sub.data" [labels]="sub.labels"></map-show>
+      <div class="mapcont"><map-show [show]="sub.show" [data]="sub.data" [labels]="sub.labels"></map-show></div>
       </div>
      
     </div>

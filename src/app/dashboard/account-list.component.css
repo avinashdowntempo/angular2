@@ -1,4 +1,11 @@
 .acchead{
-  background-color: grey;
+  background-color: #81bfe6;
   color: white;
+}
+.tabact{
+    background-color: #ececec;
+    
+}
+.mapcont{
+  width: 100%;
 }
