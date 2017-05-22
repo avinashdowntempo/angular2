@@ -17,6 +17,7 @@ export class AccountListComponent implements OnInit {
    }
    ngOnInit() {
      this.getAccounts();
+	 console.log(this.accounts);
    }
   onSelect(mod) {
     if ( mod.show === false){

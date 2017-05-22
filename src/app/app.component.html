@@ -25,24 +25,15 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Account Details</a></li>
-          <li><a href="#">My Profile</a></li>
-          <li><a href="#">Documents</a></li>
-          <li><a href="#">Approvals</a></li>
+          <li><a routerLink="/HOME" routerLinkActive="active">Home</a></li>
+          <li><a routerLink="/ACCOUNTDETAILS" routerLinkActive="active">Account Details</a></li>
+          <li><a routerLink="/MYPROFILE" routerLinkActive="active">My Profile</a></li>
+          <li><a routerLink="/DOCUMENTS" routerLinkActive="active">Documents</a></li>
+          <li><a routerLink="/APPROVALS" routerLinkActive="active">Approvals</a></li>
         </ul>
       </div>
     </div> 
   </nav>
-<!-- home page route -->
-  <ul class="nav nav-tabs">
-    <li role="presentation" class="active"><a href="#">DASHBOARD</a></li>
-    <li role="presentation"><a href="#">MY ALERTS</a></li>
-  </ul>
-  <br>
-  <br>
-<!-- account tab route component -->
-  <account-list></account-list>
-  <!-- MY Advisor component -->
-  <my-advisor></my-advisor>
-</div>
+ <!-- routing happens here-->
+  <router-outlet></router-outlet>
+  </div>

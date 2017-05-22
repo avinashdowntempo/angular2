@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
+ <base href="/">
   <meta charset="utf-8">
   <title>MyApp</title>
-  <base href="/">
+
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -14,66 +15,15 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
-<!-- <script src="https://www.gstatic.com/charts/loader.js"></script>-->
-<!--script>  
-    // !important: You want to give this variable(var googleLoaded = false;). This is used to run multiple chart in your jade.
-    var googleLoaded = false;
-    // !important: Define whch chart packages to preload.Because this package uses ChartWrappers you can use any chart type that Google supports, but if it // isn't loaded it will load it on demand. 
-    var googleChartsPackagesToLoad = ['geochart'];
-</script>
--->
+
   <script src="https://www.google.com/jsapi"></script>
   <script >
   google.load('visualization', '1.0', {
       'packages': ['corechart']
     });
     </script>
-   <!--<script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {  
-	  	 var data=[];
-          data[0] = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Global Equity',     41.93],
-          ['Canadian Equity',      35.09],
-          ['Canadian Balanced',  22.99]
-        ]);
-		data[1] = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['boom shakalaka',     22.93],
-          ['aaromale',      15.09],
-          ['hosanna',  44.99],
-		  ['dhoon',  44.99]
-        ]);
-		data[2] = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['bulb',     41.93]
-        ]);
-
-        var options = {
-          title: 'By Assset Class',
-		  pieHole: 0.4,
-
-        };
-		var x = document.getElementsByClassName("piechart");
-		var i;
-		var count=0;
-		for (i = 0; i < x.length; i++) {
-		    var chart = new google.visualization.PieChart(x[i]);	
-			chart.draw(data[count], options);
-				count++;
-				if(count>2)
-				{
-				count=0;
-				}
-		} 
-	
-      }
-    </script>!-->
-
+  
+ 
  </head>
 <body>
 <div class="container">
