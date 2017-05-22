@@ -12,8 +12,8 @@ import { HomePageComponent } from './homepage/home-page.component';
 import { AccountDetailsComponent} from './accountdetails/account-details.component';
 import { MyProfileComponent} from './myprofile/my-profile.component';
 import { DocumentPageComponent} from './documents/document-page.component';
-import { PageNotFoundComponent } from './page-not-found.component';
-import { PageUnderConstructionComponent } from './page-under-construction.component';
+import { PageNotFoundComponent } from './errors/page-not-found.component';
+import { PageUnderConstructionComponent } from './errors/page-under-construction.component';
 
 const appRoutes: Routes = [
   { path: 'HOME', component: HomePageComponent },
