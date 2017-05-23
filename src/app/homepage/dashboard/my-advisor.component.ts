@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
-import { AdvisorService } from './services/advisor.service';
+import { AdvisorHttpService } from './services/advisor-http.service';
 import { Advisor } from './models/advisor';
 import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'my-advisor',
   templateUrl: './my-advisor.component.html',
-  providers: [AdvisorService]
+  providers: [AdvisorHttpService]
 })
 export class MyAdvisorComponent implements OnInit {
     advisor: Advisor;
 		
-    constructor(private _advisorService: AdvisorService){}
+    constructor(private _advisorHttpService: AdvisorHttpService){}
    getAdvisor(){
 	  this.advisor={myadvisor:'',address:'',tel:'',email:'',display:''}; //default advisor when data not fetched
-	  this._advisorService.getAdvisor().then((advisor: Advisor) => this.advisor = advisor);
+    this._advisorHttpService.getAdvisor().subscribe(data => this.advisor = data);
 	 console.log(this.advisor);
 		}
     ngOnInit() {	

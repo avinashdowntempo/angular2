@@ -3,13 +3,13 @@ import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class AccountHttpService {
+export class AdvisorHttpService {
   constructor (
     private http: Http
   ) {}
 
-  getAccounts() {
-    return this.http.get(`http://localhost:3000/universis/accounts`)
+  getAdvisor() {
+    return this.http.get(`http://localhost:3000/universis/advisor`)
     .map((res:Response) => res.json());
   }
 
