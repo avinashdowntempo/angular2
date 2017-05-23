@@ -9,16 +9,17 @@ import { OnInit } from '@angular/core';
   providers: [AdvisorHttpService]
 })
 export class MyAdvisorComponent implements OnInit {
-    advisor: Advisor;
+    advisor: Advisor[];
 		
     constructor(private _advisorHttpService: AdvisorHttpService){}
    getAdvisor(){
-	  this.advisor={myadvisor:'',address:'',tel:'',email:'',display:''}; //default advisor when data not fetched
-    this._advisorHttpService.getAdvisor().subscribe(data => this.advisor = data);
+	   //default advisor when data not fetched
+      this.advisor=[{myadvisor:'boom',address:'',tel:'',email:'',display:''}];
+         this._advisorHttpService.getAdvisor().then(data => this.advisor = data);
+    //this._advisorHttpService.getAdvisor().subscribe(data => this.advisor = data);
 	 console.log(this.advisor);
 		}
-    ngOnInit() {	
+    ngOnInit() {     
     this.getAdvisor();
-	  console.log(this.advisor);
   }
 }
