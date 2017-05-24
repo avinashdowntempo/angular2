@@ -1,8 +1,16 @@
-<div *ngIf="show === true" class="chart"
+<div  *ngIf="show === true" class="container"><div class="chart pull-left"
                     chart  
                     [data]="data" 
                     [options]="options" 
                     [labels]="labels" 
                     [columnTypes]="columnTypes" 
                     [chartType]="chartType">
+             </div>
+             <br>
+             Account details:
+             <br>
+             <button type="button" class="btn btn-info">View Investments</button>
+             <br>
+             <br>
+      <button type="button" class="btn btn-info">View Transactions</button> 
              </div>

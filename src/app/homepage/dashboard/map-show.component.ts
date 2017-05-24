@@ -16,7 +16,7 @@ export class MapShowComponent {
                 }];
   chartType = 'Pie';
   options = {
-                'width': 550,
+                'width': 500,
                 'height': 300,
                 'pieHole': 0.4,
                 'bars': 'vertical',
