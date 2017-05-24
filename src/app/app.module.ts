@@ -14,14 +14,21 @@ import { MyProfileComponent} from './myprofile/my-profile.component';
 import { DocumentPageComponent} from './documents/document-page.component';
 import { PageNotFoundComponent } from './errors/page-not-found.component';
 import { PageUnderConstructionComponent } from './errors/page-under-construction.component';
+import { MyAlertsComponent } from './homepage/myalerts/my-alerts.component';
+import { DashboardContainerComponent } from './homepage/dashboard/dashboard-container.component';
 
 const appRoutes: Routes = [
-  { path: 'HOME', component: HomePageComponent },
+  { path: 'HOME', component: HomePageComponent, children: [
+      { path: '', redirectTo: 'DASHBOARD', pathMatch: 'full' },
+      { path: 'DASHBOARD', component: DashboardContainerComponent },
+      { path: 'MYALERTS', component: MyAlertsComponent },
+      { path: '**', redirectTo: 'DASHBOARD', pathMatch: 'full' }
+    ]},
   { path: 'ACCOUNTDETAILS', component: AccountDetailsComponent },
   { path: 'MYPROFILE', component: MyProfileComponent },
   { path: 'DOCUMENTS', component: DocumentPageComponent },
   { path: 'APPROVALS', component: PageUnderConstructionComponent },
-  { path: '', redirectTo: '/HOME', pathMatch: 'full' },
+  { path: '', redirectTo: 'HOME', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 
@@ -31,15 +38,17 @@ const appRoutes: Routes = [
     AccountListComponent,
     MyAdvisorComponent,
     MapShowComponent,
-	HomePageComponent,
-	MyProfileComponent,
-	AccountDetailsComponent,
-	DocumentPageComponent,
-	PageNotFoundComponent,
-	PageUnderConstructionComponent
+    HomePageComponent,
+    MyProfileComponent,
+    AccountDetailsComponent,
+    DocumentPageComponent,
+    PageNotFoundComponent,
+    PageUnderConstructionComponent,
+    MyAlertsComponent,
+    DashboardContainerComponent
   ],
   imports: [
-	RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes),
     BrowserModule,
     FormsModule,
     Ng2GoogleChartModule,
