@@ -6,6 +6,7 @@ import { OnInit } from '@angular/core';
 @Component({
   selector: 'my-advisor',
   templateUrl: './my-advisor.component.html',
+  styleUrls: ['./my-advisor.component.css'],
   providers: [AdvisorHttpService]
 })
 export class MyAdvisorComponent implements OnInit {
