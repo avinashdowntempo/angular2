@@ -15,7 +15,7 @@ export class MyAdvisorComponent implements OnInit {
     constructor(private _advisorHttpService: AdvisorHttpService){}
    getAdvisor(){
 	   //default advisor when data not fetched
-      this.advisor=[{myadvisor:'boom',address:'',tel:'',email:'',display:''}];
+      this.advisor=[{myadvisor:'',address:'',tel:'',email:'',display:''}];
          this._advisorHttpService.getAdvisor().then(data => this.advisor = data);
     //this._advisorHttpService.getAdvisor().subscribe(data => this.advisor = data);
 	 console.log(this.advisor);
